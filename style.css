@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+body {
+  font-family: "Cairo", sans-serif;
+  font-size: 18px;
+  text-transform: capitalize;
+  width: 100%;
+  height: 100dvh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url(qbg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.count,
+.count2,
+.count3 {
+  width: 22rem;
+  height: 34rem;
+  background-image: url(tbg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+.count3,
+.count2 {
+  display: none;
+  transition: 0.5s ease-in-out;
+}
+
+.mushaf {
+  justify-content: center;
+  align-items: center;
+  display: block;
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(7%, 5%);
+}
+select {
+  width: 80%;
+  height: 2rem;
+  border: none;
+  outline: none;
+  background: #cfcdcd;
+  color: #053a58;
+  border-radius: 5px;
+  padding: 1px;
+  display: block;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 0.2rem;
+}
+audio {
+  width: 80%;
+  transition: 0.5s ease-in-out;
+}
+label {
+  color: #053a58;
+  font-size: 1rem;
+}
+.title {
+  right: 3rem;
+  display: block;
+  position: absolute;
+  text-align: right;
+  cursor: default;
+}
+.title h1 {
+  color: #b9610ed7;
+  font-weight: bold;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+.title h5 {
+  color: #b9750ecb;
+  font-size: clamp(1rem, 5vw, 2rem);
+  margin-top: 0.2rem;
+}
+.count3 h1,
+.count2 h1 {
+  color: #b41904;
+  text-align: center;
+  transform: translate(-10%);
+  cursor: default;
+  transition: 0.5s ease-in-out;
+}
+.count2 audio,
+.count3 audio {
+  width: 100%;
+  text-align: center;
+  transform: translate(-10%);
+  transition: 0.5s ease-in-out;
+}
+
+nav {
+  z-index: 1;
+  display: flex;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  
+}
+a {
+  color: #cbd0d4;
+  text-decoration: none;
+  font-size: clamp(10px, 5vw, 20px);
+  margin: 0.2rem;
+  padding: 5px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  
+}
+a::before{
+  content:'';
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  background: #cbd0d4;
+  left: -5px;
+}
+a:hover {
+  color: #fff4f0;
+  transition: 0.3s ease-in-out;
+}
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #ff9101;
+  transition: 0.5s ease;
+}
+a:hover::after, a:focus-visible::after {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.active {
+  color: #fff4f0;
+}
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #ff9101;
+  transition: 0.5s ease;
+}
+@media (max-width: 1025px) {
+  .container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  .title {
+    position: static;
+    text-align: center;
+    right: 0;
+  }
+  .count,
+  .count2,
+  .count3 {
+    margin-top: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+  }
+  nav {
+    justify-content: center;
+    text-align: center;
+    right: 50%;
+    transform: translate(50%);
+    position: absolute;
+    margin-top: 5rem;
+    width: 100%;
+  }
+}

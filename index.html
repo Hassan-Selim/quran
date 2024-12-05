@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="iOqWrzojIXWfqaihgSzGskM-0rfDq9d4a4m-n_fQEhw" />
+    <title>Quran</title>
+    <link rel="icon" href="q.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <a onclick="showBlog()" class="blog" href="https://hassanselim.blogspot.com" target="_blank" >Blog</a>
+        <a onclick="showRedio()" class="radio">الراديو</a>
+        <a onclick="showRuqia()" class="roqia">الرقية الشرعية</a>
+        <a onclick="showMoshf()" class="moshf active">المصحف</a>
+      </nav>
+      <div class="title">
+        <h1>إنه لقرآن كريم</h1>
+        <h5>في كتاب مكنون</h5>
+      </div>
+      <div class="count">
+        <div class="mushaf">
+          <div class="reciter">
+            <label for="soura">اختر القارئ</label>
+            <select name="reciter" id="chooseReciter"></select>
+          </div>
+          <div class="moshaf">
+            <label for="moshaf">اختر الرواية</label>
+            <select name="moshaf" id="chooseMoshaf"></select>
+          </div>
+
+          <div class="surah">
+            <label for="quraa">اختر السورة</label>
+            <select name="surah" id="chooseSurah"></select>
+          </div>
+          <audio id="audio" src="" controls></audio>
+        </div>
+      </div>
+      <div class="count2">
+        <div class="mushaf">
+          <h1>راديو مباشر</h1>
+          <audio
+            id="radio-audio"
+            src="https://qurango.net/radio/tarateel"
+            controls
+          ></audio>
+        </div>
+      </div>
+      <div class="count3">
+        <div class="mushaf">
+          <h1>الرقية الشرعية</h1>
+          <audio
+            id="roqia-audio"
+            src="https://backup.qurango.net/radio/roqiah"
+            controls
+          ></audio>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
